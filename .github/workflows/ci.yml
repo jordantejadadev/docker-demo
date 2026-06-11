@@ -48,4 +48,14 @@ jobs:
                 SPRING_DATASOURCE_PASSWORD: 123456
               run: ./mvnw clean verify
 
+            - name: Build Backend Docker Image
+              run: docker build -t docker-demo-backend .
+              working-directory: backend
+
+            - name: Build Frontend Docker Image
+              run: docker build -t docker-demo-frontend .
+              working-directory: frontend
+              
+
+
                 
