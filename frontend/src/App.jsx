@@ -4,7 +4,7 @@ const App = () => {
   const [message, setMessage] = useState("");
 
   const loadMessage = async () => {
-    const response = await fetch("http://localhost:8080/api/message");
+    const response = await fetch("/api/message");
 
     const data = await response.json();
 
